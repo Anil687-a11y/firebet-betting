@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import InstallPrompt from './components/InstallPrompt';
 
 // Pages
 import Login from './pages/Login';
@@ -51,6 +52,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
+        <InstallPrompt />
         <ToastContainer
           position="top-center"
           autoClose={3000}

@@ -104,3 +104,15 @@ input:focus, textarea:focus {
 .slide-in {
   animation: slideIn 0.5s ease-out;
 }
+
+/* Slide down animation for install banner */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
