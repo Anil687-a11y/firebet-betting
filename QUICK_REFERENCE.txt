@@ -1,0 +1,139 @@
+
+╔═══════════════════════════════════════════════════════════════╗
+║                   FIREBET QUICK REFERENCE                     ║
+╚═══════════════════════════════════════════════════════════════╝
+
+🚀 START THE APP
+─────────────────────────────────────────────────────────────────
+Windows:        Double-click start.bat
+Command Line:   npm run dev
+Backend Only:   npm run server
+Frontend Only:  npm run client
+
+📱 ACCESS THE APP
+─────────────────────────────────────────────────────────────────
+Frontend:       http://localhost:3000
+Backend API:    http://localhost:5000
+
+🔑 FIRST TIME SETUP
+─────────────────────────────────────────────────────────────────
+1. Open http://localhost:3000
+2. Click "Register"
+3. Fill in:
+   - Email
+   - Password
+   - Free Fire UID
+   - Free Fire Name
+4. Check terminal for verification code
+5. Enter code and login
+
+👑 CREATE ADMIN ACCOUNT
+─────────────────────────────────────────────────────────────────
+1. Register normally
+2. Go to MongoDB Atlas: https://cloud.mongodb.com
+3. Browse Collections → firebet → users
+4. Find your user (by email)
+5. Edit: Add "isAdmin": true
+6. Save and refresh app
+
+💰 TEST WALLET
+─────────────────────────────────────────────────────────────────
+1. Go to Wallet tab
+2. Click "Deposit"
+3. Enter amount (e.g., 500)
+4. Click "Pay via eSewa"
+   (Currently adds directly - eSewa not integrated yet)
+
+🎮 TEST ROOM FLOW
+─────────────────────────────────────────────────────────────────
+As Player 1:
+1. Dashboard → Create Room
+2. Select match type (1v1, 2v2, etc.)
+3. Enter Room ID, Password, Amount
+4. Click "Create Room & Pay"
+
+As Player 2 (open in incognito):
+1. Register another account
+2. Rooms tab → Click on room
+3. Click "Join Room"
+
+Both Players:
+1. Play match in Free Fire
+2. Take screenshot
+3. Submit in room details
+
+As Admin:
+1. Admin tab → Rooms
+2. Review screenshots
+3. Click winner's name
+4. Money transferred!
+
+🔧 COMMON COMMANDS
+─────────────────────────────────────────────────────────────────
+Install all:        npm run install-all
+Start dev:          npm run dev
+Start backend:      npm run server
+Start frontend:     npm run client
+Install backend:    npm install
+Install frontend:   npm --prefix client install
+
+📁 IMPORTANT FILES
+─────────────────────────────────────────────────────────────────
+Configuration:      .env
+Backend entry:      server/index.js
+Frontend entry:     client/src/index.js
+Database models:    server/models/
+API routes:         server/routes/
+React pages:        client/src/pages/
+
+🐛 TROUBLESHOOTING
+─────────────────────────────────────────────────────────────────
+Port in use:
+→ Close apps on port 5000/3000
+→ Or change PORT in .env
+
+MongoDB error:
+→ Check .env connection string
+→ Verify Atlas IP whitelist (0.0.0.0/0)
+
+Module not found:
+→ npm install
+→ npm --prefix client install
+
+Email code not received:
+→ Check terminal/console output
+→ Email service not configured yet
+
+📚 DOCUMENTATION
+─────────────────────────────────────────────────────────────────
+START.md            - Quick start (2 min)
+GETTING_STARTED.md  - Beginner guide
+SETUP.md            - Detailed setup
+INDEX.md            - Documentation index
+APP_FLOW.md         - Visual user journey
+PROJECT_SUMMARY.md  - Complete features
+FINAL_CHECKLIST.md  - Pre-launch tasks
+
+💡 TIPS
+─────────────────────────────────────────────────────────────────
+• Keep terminal open to see logs
+• Check console for verification codes
+• Use incognito for testing multiple users
+• Screenshots show in uploads/ folder
+• Admin panel only visible to admin users
+
+🎯 PRODUCTION CHECKLIST
+─────────────────────────────────────────────────────────────────
+□ Configure email service (Gmail SMTP)
+□ Integrate eSewa payment gateway
+□ Deploy backend (Heroku/Railway)
+□ Deploy frontend (Vercel/Netlify)
+□ Create admin account
+□ Test on mobile devices
+□ Enable HTTPS
+□ Test all features
+
+═══════════════════════════════════════════════════════════════
+
+Need help? Check INDEX.md for all documentation!
+
